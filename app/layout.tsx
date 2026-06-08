@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Fraunces } from "next/font/google";
+import { Geist, Geist_Mono, Fraunces, Newsreader, Tinos } from "next/font/google";
 import "./globals.css";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
 });
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +14,17 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
+  subsets: ["latin"],
+});
+
+const tinos = Tinos({
+  weight: "400",
+  variable: "--font-tinos",
   subsets: ["latin"],
 });
 
@@ -31,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${geistSans.variable} ${geistMono.variable} ${newsreader.variable} ${tinos.variable} h-full antialiased`}
     >
       <body className="max-w-xl mt-40 mx-auto flex flex-col">{children}</body>
     </html>

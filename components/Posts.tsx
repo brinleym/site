@@ -6,15 +6,12 @@ export default function Posts() {
   console.log(posts);
 
   return (
-      <div className="space-y-8">
-        {posts.map(({ slug, title, date }) => (
-          <article key={slug} className="border-b border-gray-200 pb-6">
-            <h2 className="text-2xl font-semibold text-blue-600 hover:underline mb-2">
-              <Link href={`/posts/${slug}`}>{title}</Link>
-            </h2>
-            <small className="text-gray-500 block mb-2">{date}</small>
-          </article>
+      <ul className="space-y-8">
+        {posts.map(({ slug, title }) => (
+            <li key={slug}>
+                <Link className="border-b border-dashed border-neutral-500 hover:border-neutral-400 transition-all" href={`/posts/${slug}`}>{title}</Link>
+            </li>
         ))}
-      </div>
+      </ul>
   );
 };
