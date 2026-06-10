@@ -82,8 +82,8 @@ export default async function DynamicPage({ params }: PageProps) {
                 ← Back to home
             </Link>
         </div>
-        <article className="my-20">
-            <h1 className="font-serif text-2xl">{post.frontmatter.title}</h1>
+        <article className="my-10">
+            <h1 className="font-serif text-2xl mb-2">{post.frontmatter.title}</h1>
             
             {/* Renders the clean markdown content string */}
             <MDXRemote source={post.content} components={customComponents} />
