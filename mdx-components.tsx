@@ -19,7 +19,7 @@ const components: MDXComponents = {
     <li className="text-base leading-relaxed">{children}</li>
   ),
   a: ({ href, children, ...props }) => (
-    <a href={href} className="border-b border-dashed border-neutral-500 hover:border-neutral-400 transition-all">{children}</a>
+    <a href={href} target="_blank" className="border-b border-dashed border-neutral-500 hover:border-neutral-400 transition-all">{children}</a>
   ),
   Posts
 };

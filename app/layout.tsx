@@ -43,7 +43,7 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${geistSans.variable} ${geistMono.variable} ${newsreader.variable} ${tinos.variable} h-full antialiased`}
     >
-      <body className="max-w-xl mt-40 mx-auto flex flex-col">{children}</body>
+      <body className="max-w-xl mt-10 mx-auto flex flex-col">{children}</body>
     </html>
   );
 }
