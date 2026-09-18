@@ -1,15 +1,14 @@
-import Link from 'next/link';
+import MyLink from "./MyLink";
 import { getSortedPostsData } from '@/lib/blog';
 
 export default function Posts() {
   const posts = getSortedPostsData();
-  console.log(posts);
 
   return (
-      <ul className="space-y-8">
+      <ul>
         {posts.map(({ slug, title }) => (
             <li key={slug}>
-                <Link className="border-b border-dashed border-neutral-500 hover:border-neutral-400 transition-all" href={`${slug}`}>{title}</Link>
+              <MyLink text={title} url={slug} />
             </li>
         ))}
       </ul>

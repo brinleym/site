@@ -1,5 +1,8 @@
 import type { MDXComponents } from 'mdx/types';
+import ContactInfo from './components/ContactInfo';
 import Posts from './components/Posts';
+import Projects from './components/Projects';
+import Section from './components/Section';
 
  
 const components: MDXComponents = {
@@ -21,7 +24,10 @@ const components: MDXComponents = {
   a: ({ href, children, ...props }) => (
     <a href={href} target="_blank" className="border-b border-dashed border-neutral-500 hover:border-neutral-400 transition-all">{children}</a>
   ),
-  Posts
+  Posts,
+  Projects,
+  Section,
+  ContactInfo,
 };
  
 export function useMDXComponents(): MDXComponents {
