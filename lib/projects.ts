@@ -24,5 +24,11 @@ export function getProjectsData() {
             title: "Podcast",
             organization: "MITRE"
         },
+        {
+            id: "game",
+            url: "https://mightystudios.wixsite.com/special",
+            title: "Puzzle Game",
+            organization: "Tufts"
+        },
     ]
 }
