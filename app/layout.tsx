@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Fraunces, Newsreader, Tinos } from "next/font/google";
 import "./globals.css";
@@ -43,7 +44,10 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${geistSans.variable} ${geistMono.variable} ${newsreader.variable} ${tinos.variable} h-full antialiased`}
     >
-      <body className="w-full mt-30 mx-auto px-5 md:px-0 flex flex-col">{children}</body>
+      <body className="w-full mt-30 mx-auto px-5 md:px-0 flex flex-col">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
