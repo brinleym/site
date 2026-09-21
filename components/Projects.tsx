@@ -8,14 +8,13 @@ export default function Projects() {
   const shopify = projects.find((p) => p.id === "shopify");
   const podcast = projects.find((p) => p.id === "podcast");
   const game = projects.find((p) => p.id === "game");
-  console.log(projects);
 
   return (
-      <ul>
-        {navigator && <li><MyLink url={navigator.url} text={navigator.title} options={{ isExternal: true, icon: FaMeta }} /></li>}
-        {shopify && <li><MyLink url={shopify.url} text={shopify.title} options={{ isExternal: true, icon: FaWhatsapp }} /></li>}
-        {podcast && <li><MyLink url={podcast.url} text={podcast.title} options={{ isExternal: true, icon: FaPodcast }} /></li>}
-        {game && <li><MyLink url={game.url} text={game.title} options={{ isExternal: true, icon: FaGamepad }} /></li>}
-      </ul>
+    <ul>
+      {navigator && <li><MyLink url={navigator.url} text={navigator.title} options={{ isExternal: true, icon: FaMeta }} /></li>}
+      {shopify && <li><MyLink url={shopify.url} text={shopify.title} options={{ isExternal: true, icon: FaWhatsapp }} /></li>}
+      {podcast && <li><MyLink url={podcast.url} text={podcast.title} options={{ isExternal: true, icon: FaPodcast }} /></li>}
+      {game && <li><MyLink url={game.url} text={game.title} options={{ isExternal: true, icon: FaGamepad }} /></li>}
+    </ul>
   );
 };
