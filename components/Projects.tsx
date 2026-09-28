@@ -1,6 +1,5 @@
 import { getProjectsData } from '@/lib/projects';
 import MyLink from './MyLink';
-import { FaWhatsapp, FaMeta, FaPodcast, FaGamepad } from 'react-icons/fa6';
 
 export default function Projects() {
   const projects = getProjectsData();
@@ -11,10 +10,10 @@ export default function Projects() {
 
   return (
     <ul>
-      {navigator && <li><MyLink url={navigator.url} text={navigator.title} options={{ isExternal: true, icon: FaMeta }} /></li>}
-      {shopify && <li><MyLink url={shopify.url} text={shopify.title} options={{ isExternal: true, icon: FaWhatsapp }} /></li>}
-      {podcast && <li><MyLink url={podcast.url} text={podcast.title} options={{ isExternal: true, icon: FaPodcast }} /></li>}
-      {game && <li><MyLink url={game.url} text={game.title} options={{ isExternal: true, icon: FaGamepad }} /></li>}
+      {shopify && <li><MyLink url={shopify.url} text={shopify.title} options={{ isExternal: true }} /></li>}
+      {navigator && <li><MyLink url={navigator.url} text={navigator.title} options={{ isExternal: true }} /></li>}
+      {podcast && <li><MyLink url={podcast.url} text={podcast.title} options={{ isExternal: true }} /></li>}
+      {game && <li><MyLink url={game.url} text={game.title} options={{ isExternal: true }} /></li>}
     </ul>
   );
 };
